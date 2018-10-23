@@ -1,0 +1,10 @@
+.blocLogin {
+    background-color: #c06e1c;
+    margin-top: 40vh;
+    padding: 50px 0px 50px 0px;
+    border-radius: 15px;
+    border : 2px solid black;
+}
+body {
+    background-image: url("../images/index.jpeg");
+}

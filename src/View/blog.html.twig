@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+{% block style %}
+<link rel="stylesheet" href="assets/css/blog.css">
+{% endblock %}
+{% block title %}Fil d'actualités{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center" style="background-color: #c06e1c; padding: 20px;">Blog des Curcubitacées</h1>
+    <p class="text-center"><a href="/blog/ajouter" style="background-color: #c06e1c; color: antiquewhite; font-size: 2rem; padding: 5px; border-radius: 5px">Ajouter un article</a></p>
+    <div class="row justify-content-center">
+        {% for article in articles %}
+        <div class="col-12">
+            <div class="card mx-auto" style="width: 75%;">
+                <img class="card-img-top" src="assets/images/{{ article.image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ article.title }}</h5>
+                    <p class="card-text">{{ article.content }}
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium amet, aspernatur at autem cupiditate ducimus earum expedita explicabo hic incidunt, iure laborum maxime necessitatibus porro qui quis quod reiciendis sapiente similique sit sunt tempore totam voluptates voluptatibus? Accusamus architecto consectetur dolorem illo in maxime praesentium veritatis. Ab ad adipisci aliquam aspernatur assumenda atque commodi consequatur culpa dignissimos dolor dolores doloribus ducimus eaque facilis incidunt inventore laboriosam libero maxime molestiae nesciunt nostrum, nulla perferendis porro possimus praesentium, quasi quia quod rem sequi totam ullam velit veritatis, voluptas. Accusamus aliquid eius et exercitationem iure? Ab aut consectetur, culpa officiis omnis quas?</p>
+                    <a href="#" class="btn btn-primary">Modifier</a>
+                    <a href="/blog/delete/{{ article.id }}" class="btn btn-primary">Supprimer</a>
+                </div>
+            </div>
+            <br><br>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

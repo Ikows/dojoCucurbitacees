@@ -1,0 +1,19 @@
+{%  extends 'layout.html.twig' %}
+
+{% block style %}
+<link rel="stylesheet" href="ajout.css" type="text/css">
+{% endblock %}
+
+{% block title %}Ajouter un article{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form action="" method="post" enctype="multipart/form-data" class="w-75 mx-auto">
+            <p><input type="text" name="title" id="title" placeholder="Titre"></p>
+            <p><textarea name="content" id="content" placeholder="Votre article ici"></textarea></p>
+            <p><input type="file" name="image"></p>
+            <p><input type="submit" name="submit" id="submit" value="Ajouter"></p>
+        </form>
+    </div>
+
+{% endblock %}
